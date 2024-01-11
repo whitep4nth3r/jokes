@@ -34,7 +34,8 @@
         }
       });
 
-      start_here.splice(3, 0, count_uppercase).splice(4, 0, count_topics);
+      start_here.splice(4, 0, count_topics);
+      start_here.splice(3, 0, count_uppercase);
 
       const answer = atob(secret_ingredient) + start_here.join("");
 
