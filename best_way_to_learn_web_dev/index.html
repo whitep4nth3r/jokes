@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What's the best way to learn web dev?</title>
+  </head>
+  <body>
+    <h1>What's the best way to learn web dev?</h1>
+
+    <script src="secret_ingredient.js"></script>
+    <script>
+      const topics = [
+        "dom",
+        "Questions",
+        "wysiwyg",
+        "window",
+        "While loops",
+        "get request",
+        "XML",
+        "css",
+        "Query parameters",
+      ];
+
+      const count_topics = topics.length;
+
+      const start_here = topics.map((topic) => topic.slice(0, 1));
+
+      let count_uppercase = 0;
+
+      start_here.forEach((letter) => {
+        if (letter.toString() === letter.toString().toUpperCase()) {
+          count_uppercase++;
+        }
+      });
+
+      start_here.splice(4, 0, count_topics);
+      start_here.splice(3, 0, count_uppercase);
+
+      const answer = atob(secret_ingredient) + start_here.join("");
+
+      window.location.href = answer;
+    </script>
+  </body>
+</html>
