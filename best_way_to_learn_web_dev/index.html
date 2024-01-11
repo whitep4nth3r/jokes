@@ -24,20 +24,20 @@
 
       const count_topics = topics.length;
 
-      const start_here = topics.map((topic) => topic.slice(0, 1));
+      const first_chars = topics.map((topic) => topic.slice(0, 1));
 
       let count_uppercase = 0;
 
-      start_here.forEach((letter) => {
-        if (letter.toString() === letter.toString().toUpperCase()) {
+      first_chars.forEach((letter) => {
+        if (letter === letter.toUpperCase()) {
           count_uppercase++;
         }
       });
 
-      start_here.splice(4, 0, count_topics);
-      start_here.splice(3, 0, count_uppercase);
+      first_chars.splice(4, 0, count_topics);
+      first_chars.splice(3, 0, count_uppercase);
 
-      const answer = atob(secret_ingredient) + start_here.join("");
+      const answer = atob(secret_ingredient) + first_chars.join("");
 
       window.location.href = answer;
     </script>
