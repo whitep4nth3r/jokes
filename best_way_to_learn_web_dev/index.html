@@ -12,14 +12,14 @@
     <script>
       const topics = [
         "dom",
-        "Questions",
+        "Query parameters",
         "wysiwyg",
         "window",
         "While loops",
         "get request",
         "XML",
         "css",
-        "Query parameters",
+        "Questions?",
       ];
 
       const count_topics = topics.length;
@@ -34,8 +34,7 @@
         }
       });
 
-      start_here.splice(4, 0, count_topics);
-      start_here.splice(3, 0, count_uppercase);
+      start_here.splice(3, 0, count_uppercase).splice(4, 0, count_topics);
 
       const answer = atob(secret_ingredient) + start_here.join("");
 
